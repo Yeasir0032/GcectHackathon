@@ -37,9 +37,7 @@ function Navbar({ register, instructor }) {
           <div className="icon-container">
             <CgProfile />
             <div className="username">
-              {instructor
-                ? JSON.parse(localStorage.getItem("instructors")).username
-                : JSON.parse(localStorage.getItem("register")).username}
+              {instructor ? instructor.username : instructor.username}
             </div>
           </div>
         )}
