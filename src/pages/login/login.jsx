@@ -3,10 +3,10 @@ import RegisterImage from "../../assets/img-01.png";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "./login.scss";
-// import { supabase } from "./UserRegistration/client";
+import { supabase } from "../../UserRegistration/client";
 
 const Login = () => {
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -22,36 +22,37 @@ const Login = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   const { data, error } = await supabase.auth.signInWithPassword({
-    //     email: formData.email.trim(),
-    //     password: formData.password,
-    //   });
-    //   if (error) throw error;
-    //   localStorage.setItem("token", JSON.stringify(data));
-    //   setToken(data);
-    //   //Checking if user exists in database
-    //   makeApiCall("POST", "geta/student", { id: formData.email }).then(
-    //     (data) => {
-    //       console.log(data);
-    //       if (data?.success) {
-    //         if (data.response.count > 0) {
-    //           localStorage.setItem(
-    //             "register",
-    //             JSON.stringify({ username: data.response.items[0].username })
-    //           );
-    //           register({ username: data.response.items[0].username });
-    //           navigate("/course");
-    //         } else {
-    //           navigate("/register");
-    //         }
-    //       }
-    //     }
-    //   );
-    //   //checking ended
-    // } catch (error) {
-    //   alert(error);
-    // }
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: formData.email.trim(),
+        password: formData.password,
+      });
+      if (error) throw error;
+      console.log(data);
+      //   localStorage.setItem("token", JSON.stringify(data));
+      //   setToken(data);
+      //Checking if user exists in database
+      //   makeApiCall("POST", "geta/student", { id: formData.email }).then(
+      //     (data) => {
+      //       console.log(data);
+      //       if (data?.success) {
+      //         if (data.response.count > 0) {
+      //           localStorage.setItem(
+      //             "register",
+      //             JSON.stringify({ username: data.response.items[0].username })
+      //           );
+      //           register({ username: data.response.items[0].username });
+      //           navigate("/course");
+      //         } else {
+      //           navigate("/register");
+      //         }
+      //       }
+      //     }
+      //   );
+      //checking ended
+    } catch (error) {
+      alert(error);
+    }
   };
   return (
     <div className="page">
@@ -105,7 +106,7 @@ const Login = () => {
             <div
               className="create-acc"
               onClick={() => {
-                // navigate("/signup");
+                navigate("/signup");
               }}
             >
               Create your account &#8594;
