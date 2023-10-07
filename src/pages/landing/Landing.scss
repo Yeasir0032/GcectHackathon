@@ -83,11 +83,13 @@
           font-weight: 500;
           width: fit-content;
           border: 2px solid white;
+          // svg{font-size: 20px;}
           padding: 10px 20px;
           cursor: pointer;
           &.v2 {
             background-color: white;
             color: black;
+            // svg{font-size: 20px;}
           }
           &:hover {
             opacity: 0.6;
@@ -129,11 +131,13 @@
       .ctas {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 20px;
         .banner-cta {
           text-transform: uppercase;
           font-size: 13px;
           font-weight: 500;
+          // svg{font-size: 20px;}
           width: fit-content;
           border: 2px solid white;
           padding: 10px 20px;
@@ -141,6 +145,9 @@
           &.v2 {
             background-color: white;
             color: black;
+            align-items: center;
+            text-align: center;
+            // svg{font-size: 20px;}
           }
           &:hover {
             opacity: 0.6;

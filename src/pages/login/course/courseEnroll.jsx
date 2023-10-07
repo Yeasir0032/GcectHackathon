@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./course.scss";
 import makeApiCall from "../../../utils/apiCall";
 import { useNavigate } from "react-router-dom";
+import {FaShoppingCart} from "react-icons/fa";
 const CourseEnroll = () => {
   const [courses, setCourses] = useState();
   const navigate = useNavigate();
@@ -38,7 +39,9 @@ const CourseEnroll = () => {
                 </div>
               </div>
               <div className="buttons">
-                <button className="enroll-cta">Enroll</button>
+                <button className="enroll-cta">Enroll
+                  <FaShoppingCart/>
+                </button>
                 <div className="price">
                   {item.price === 0 ? "FREE" : item.price}
                 </div>

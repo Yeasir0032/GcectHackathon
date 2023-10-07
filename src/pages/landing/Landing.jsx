@@ -2,6 +2,10 @@ import React from "react";
 import "./Landing.scss";
 import Image123 from "../../assets/img-01.png";
 import { useNavigate } from "react-router-dom";
+import {FaChalkboardTeacher} from 'react-icons/fa';
+import {RiDashboard3Line} from 'react-icons/ri';
+import {HiLibrary} from 'react-icons/hi'
+
 // import { TypeAnimation } from "react-type-animation";
 function HomeBanner({ register }) {
   const navigate = useNavigate();
@@ -27,9 +31,11 @@ function HomeBanner({ register }) {
               </p>
               <div className="ctas">
                 <div className="banner-cta" onClick={lightPressed}>
+                  <RiDashboard3Line/>{"  "}
                   Dashboard
                 </div>
                 <div className="banner-cta v2" onClick={hardPressed}>
+                  <HiLibrary/>{"  "}
                   Libray
                 </div>
               </div>
@@ -62,7 +68,7 @@ function HomeBanner({ register }) {
         <div className="text-content">
           <div className="heading">Are you an Instructor ?</div>
           <p>
-            Are you a Instructor Just Login with your credentials and Get
+            Are you an Instructor? Just Login with your credentials and Get
             connected to all your students.
           </p>
           <div className="ctas">
@@ -70,12 +76,14 @@ function HomeBanner({ register }) {
               className="banner-cta"
               onClick={() => navigate("/instructor/login")}
             >
+              <FaChalkboardTeacher/> {"  "}
               Instructor Login
             </div>
             <div
               className="banner-cta v2"
               onClick={() => navigate("/instructor")}
             >
+              <RiDashboard3Line/> {"  "}
               Instructor Dashboard
             </div>
           </div>

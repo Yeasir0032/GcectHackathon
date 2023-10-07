@@ -5,6 +5,7 @@ import Syllabus from "./Syllabus/Syllabus";
 import Learn from "./Learn/learn";
 import makeApiCall from "../../utils/apiCall";
 import Message from "./Message";
+import {BsPersonCircle} from 'react-icons/bs'
 
 function StudentDashboard() {
   const [StudentData, setStudentData] = useState();
