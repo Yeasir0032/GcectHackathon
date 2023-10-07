@@ -43,7 +43,7 @@ function Navbar({ register, instructor }) {
             <CgProfile />
             <div className="username">
               {instructor
-                ? JSON.parse(localStorage.getItem("instructor")).username
+                ? JSON.parse(localStorage.getItem("instructo")).username
                 : JSON.parse(localStorage.getItem("register")).username}
             </div>
           </div>
