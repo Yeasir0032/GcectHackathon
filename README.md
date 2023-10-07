@@ -46,11 +46,7 @@ Alien Hub aims to provide personalized learning paths for each user. Through adv
 
 We recognize the importance of collaborative learning. In the future, we intend to integrate collaboration tools such as discussion forums, group projects, and peer-to-peer learning features to foster a sense of community among our users.
 
-### 4. Mobile App
-
-To make learning even more accessible, Alien Hub plans to develop a mobile app for both iOS and Android devices. This will allow users to access our platform on the go, ensuring that learning can happen anytime, anywhere.
-
-### 5. Certification and Assessment
+### 4. Certification and Assessment
 
 We aim to provide certification for completed courses and assessments to help users showcase their skills and knowledge to potential employers or academic institutions.
 
