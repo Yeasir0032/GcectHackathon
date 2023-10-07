@@ -58,6 +58,29 @@ function HomeBanner({ register }) {
           alt="A photo for Scholar sphere"
         />
       </div>
+      <div className="login-as-instructor">
+        <div className="text-content">
+          <div className="heading">Are you an Instructor ?</div>
+          <p>
+            Are you a Instructor Just Login with your credentials and Get
+            connected to all your students.
+          </p>
+          <div className="ctas">
+            <div
+              className="banner-cta"
+              onClick={() => navigate("/instructor/login")}
+            >
+              Instructor Login
+            </div>
+            <div
+              className="banner-cta v2"
+              onClick={() => navigate("/instructor")}
+            >
+              Instructor Dashboard
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

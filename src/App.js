@@ -53,7 +53,9 @@ function App() {
           )}
           <Route path="/signup" element={<Registration />} />
           <Route path="/library" element={<Library />} />
-          <Route path="/instructor" element={<InstructorDashboard />} />
+          {instructor && (
+            <Route path="/instructor" element={<InstructorDashboard />} />
+          )}
           <Route path="/instructor/login" element={<InstructorLoginPage />} />
           <Route path="/student" element={<StudentDashboard />} />
           <Route path="/library/:id" element={<ResourcePage />} />
