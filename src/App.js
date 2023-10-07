@@ -10,6 +10,8 @@ import UserRegistration from "./pages/login/UserRegistration";
 import CourseEnroll from "./pages/login/course/courseEnroll";
 import CourseView from "./pages/login/course/courseView";
 import StudentDashboard from "./pages/Student/dashboard";
+import InstructorDashboard from "./pages/instructor/insDashboard";
+import InstructorLoginPage from "./pages/instructor/insLogin";
 
 function App() {
   const [token, setToken] = useState();
@@ -51,6 +53,8 @@ function App() {
           )}
           <Route path="/signup" element={<Registration />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/instructor" element={<InstructorDashboard />} />
+          <Route path="/instructor/login" element={<InstructorLoginPage />} />
           <Route path="/student" element={<StudentDashboard />} />
           <Route path="/library/:id" element={<ResourcePage />} />
           {register && <Route path="/course" element={<CourseEnroll />} />}
