@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import "./login.scss";
 import RegisterImage from "../../assets/img-01.png";
+import successImage  from "../../assets/success.gif";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../UserRegistration/client";
 function Registration() {
@@ -42,7 +43,7 @@ function Registration() {
       <div className="main-content">
         <div className="wrapper">
           <div className="login-pic js-tilt" data-tilt>
-            <img src={RegisterImage} alt="ni" />
+            <img src={sumbit? RegisterImage : successImage } alt="ni" />
           </div>
           <form className="form" onSubmit={handleSubmit}>
             <span className="heading">Register User</span>

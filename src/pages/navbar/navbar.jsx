@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
@@ -9,11 +9,6 @@ function Navbar({ register, instructor }) {
   const [shownav, setShowNav] = useState(false);
   const navigate = useNavigate();
   console.log(instructor);
-  // useEffect(() => {
-  //   if (register) {
-  //     navigate("/student");
-  //   }
-  // }, []);
   return (
     <>
       <div className="nav-navbar">
@@ -24,6 +19,7 @@ function Navbar({ register, instructor }) {
           <Link to="/">Alien HUB</Link>
         </div>
         <div className="all-links">
+          {instructor && <Link to="/instructor">Dashboard</Link>}
           {register && <Link to="/student">Dashboard</Link>}
           {register && <Link to="/course">Courses</Link>}
           <Link to="/library">Library</Link>
@@ -41,9 +37,7 @@ function Navbar({ register, instructor }) {
           <div className="icon-container">
             <CgProfile />
             <div className="username">
-              {instructor
-                ? JSON.parse(localStorage.getItem("instructor")).username
-                : JSON.parse(localStorage.getItem("register")).username}
+              {instructor ? instructor.username : register.username}
             </div>
           </div>
         )}

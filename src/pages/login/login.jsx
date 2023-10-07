@@ -7,6 +7,7 @@ import "./login.scss";
 import { supabase } from "../../UserRegistration/client";
 
 const Login = ({ setToken, register }) => {
+  //Added usenavigate from react router dom
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -29,9 +30,10 @@ const Login = ({ setToken, register }) => {
         password: formData.password,
       });
       if (error) throw error;
-      // console.log(data);
+      //setting item in local storage
       localStorage.setItem("token", JSON.stringify(data));
       setToken(data);
+      //setting token
       //Checking if user exists in database
       makeApiCall("POST", "geta/student", { id: formData.email.trim() }).then(
         (data) => {
@@ -62,6 +64,7 @@ const Login = ({ setToken, register }) => {
           <div className="login-pic js-tilt" data-tilt>
             <img src={RegisterImage} alt="ni" />
           </div>
+          
           <form className="form" onSubmit={handleSubmit}>
             <span className="heading">Login User</span>
             <div
