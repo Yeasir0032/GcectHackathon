@@ -57,4 +57,5 @@ To get started with Alien Hub, simply visit our website and sign up for an accou
 ## Usage
 
 Alien Hub is free to use for all users. We are committed to keeping our platform accessible and inclusive. However, please review our terms of service and privacy policy for more information on how we collect, use, and protect your data.
+Thank you for choosing Alien Hub as your educational platform. We are excited to accompany you on your learning journey and look forward to making continuous improvements to enhance your experience.
 
