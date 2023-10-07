@@ -1,0 +1,191 @@
+@import "../css-config/mixins.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+.page {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: Poppins-Regular, sans-serif;
+  .main-content {
+    min-height: 101vh;
+    display: flex;
+    // height: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(
+      303deg,
+      rgba(182, 51, 118, 1) 5%,
+      rgba(29, 15, 74, 1) 57%
+    );
+    .wrapper {
+      margin-top: 51px;
+      // height: 700px;
+      align-items: center;
+      padding: 2rem 20px;
+      background: #fff;
+      border-radius: 18px;
+      // overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include md {
+        width: 960px;
+        flex-direction: row;
+        padding: 6rem;
+      }
+      .login-pic {
+        max-width: 206px;
+        @include md {
+          max-width: 316px;
+        }
+        img {
+          max-width: 100%;
+          vertical-align: middle;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          @include md {
+            margin: 0;
+          }
+        }
+      }
+      form {
+        width: 350px;
+        .heading {
+          font-family: sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          color: #333;
+          line-height: 1.2;
+          text-align: center;
+          width: 100%;
+          display: block;
+          padding-bottom: 54px;
+        }
+        .space {
+          position: relative;
+          width: 100%;
+          z-index: 1;
+          margin-bottom: 20px;
+          input {
+            font-size: 19px;
+            line-height: 1.5;
+            color: #666;
+            display: block;
+            width: 100%;
+            // width: 250px;
+            background: #e6e6e6;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            padding: 0 30px 0 68px;
+            @include md {
+              padding: 0 30px 0 68px;
+            }
+          }
+          .focus-input100 {
+            display: block;
+            position: absolute;
+            border-radius: 25px;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0;
+            color: rgba(87, 184, 70, 0.8);
+          }
+          .input100:focus + .focus-input100 {
+            animation: anim-shadow 0.5s ease-in-out forwards;
+          }
+          .symbol-input100 {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            border-radius: 25px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-left: 35px;
+            pointer-events: none;
+            color: #666;
+            transition: all 0.4s;
+          }
+          .input100:focus + .focus-input100 + .symbol-input100 {
+            color: #57b846;
+            padding-left: 28px;
+          }
+        }
+        .login-con {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-top: 20px;
+          button {
+            font-size: 15px;
+            color: #fff;
+            text-transform: uppercase;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            background: #57b846;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+              background-color: purple;
+            }
+          }
+        }
+        .forgot {
+          margin-top: 20px;
+          font-size: 15px;
+          color: #666;
+          padding-right: 20px;
+          cursor: pointer;
+          text-align: end;
+          &:hover {
+            color: #57b846;
+          }
+        }
+        .create-acc {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 18px;
+          color: #666;
+          @include md {
+            margin-top: 140px;
+          }
+          cursor: pointer;
+          &:hover {
+            color: #57b846;
+          }
+        }
+      }
+    }
+  }
+}
+.text-container {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 18px;
+  color: #2c2c2c;
+  font-weight: 600;
+  .email {
+    font-size: 20px;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
