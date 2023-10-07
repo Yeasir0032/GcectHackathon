@@ -33,6 +33,7 @@ const Login = ({ setToken, register }) => {
       // console.log(data);
       localStorage.setItem("token", JSON.stringify(data));
       setToken(data);
+      //setting token
       //Checking if user exists in database
       makeApiCall("POST", "geta/student", { id: formData.email.trim() }).then(
         (data) => {
@@ -63,6 +64,7 @@ const Login = ({ setToken, register }) => {
           <div className="login-pic js-tilt" data-tilt>
             <img src={RegisterImage} alt="ni" />
           </div>
+          
           <form className="form" onSubmit={handleSubmit}>
             <span className="heading">Login User</span>
             <div
