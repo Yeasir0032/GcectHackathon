@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -9,11 +9,6 @@ function Navbar({ register, instructor }) {
   const [shownav, setShowNav] = useState(false);
   const navigate = useNavigate();
   console.log(instructor);
-  // useEffect(() => {
-  //   if (register) {
-  //     navigate("/student");
-  //   }
-  // }, []);
   return (
     <>
       <div className="nav-navbar">
