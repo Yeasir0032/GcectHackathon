@@ -7,6 +7,7 @@ import "./login.scss";
 import { supabase } from "../../UserRegistration/client";
 
 const Login = ({ setToken, register }) => {
+  //Added usenavigate from react router dom
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
