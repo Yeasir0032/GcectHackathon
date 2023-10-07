@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import RegisterImage from "../../assets/img-01.png";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import makeApiCall from "../../utils/apiCall";
 import "./login.scss";
 import { supabase } from "../../UserRegistration/client";
 
-const Login = () => {
+const Login = ({ setToken, register }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -28,27 +29,27 @@ const Login = () => {
         password: formData.password,
       });
       if (error) throw error;
-      console.log(data);
-      //   localStorage.setItem("token", JSON.stringify(data));
-      //   setToken(data);
+      // console.log(data);
+      localStorage.setItem("token", JSON.stringify(data));
+      setToken(data);
       //Checking if user exists in database
-      //   makeApiCall("POST", "geta/student", { id: formData.email }).then(
-      //     (data) => {
-      //       console.log(data);
-      //       if (data?.success) {
-      //         if (data.response.count > 0) {
-      //           localStorage.setItem(
-      //             "register",
-      //             JSON.stringify({ username: data.response.items[0].username })
-      //           );
-      //           register({ username: data.response.items[0].username });
-      //           navigate("/course");
-      //         } else {
-      //           navigate("/register");
-      //         }
-      //       }
-      //     }
-      //   );
+      makeApiCall("POST", "geta/student", { id: formData.email.trim() }).then(
+        (data) => {
+          console.log(data);
+          if (data?.success) {
+            if (data.response.count > 0) {
+              localStorage.setItem(
+                "register",
+                JSON.stringify({ username: data.response.items[0].username })
+              );
+              register({ username: data.response.items[0].username });
+              navigate("/course");
+            } else {
+              navigate("/register");
+            }
+          }
+        }
+      );
       //checking ended
     } catch (error) {
       alert(error);
