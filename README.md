@@ -58,12 +58,3 @@ To get started with Alien Hub, simply visit our website and sign up for an accou
 
 Alien Hub is free to use for all users. We are committed to keeping our platform accessible and inclusive. However, please review our terms of service and privacy policy for more information on how we collect, use, and protect your data.
 
-## Contributing
-
-We welcome contributions from the community to help us improve Alien Hub. If you're interested in contributing to our platform, please check out our [Contributing Guidelines](CONTRIBUTING.md) for more information.
-
-## License
-
-Alien Hub is open-source software released under the [MIT License](LICENSE). You are free to use, modify, and distribute the codebase as per the terms of this license.
-
-Thank you for choosing Alien Hub as your educational platform. We are excited to accompany you on your learning journey and look forward to making continuous improvements to enhance your experience. If you have any questions or feedback, please don't hesitate to [contact us](mailto:support@alienhub.com). Happy learning!
