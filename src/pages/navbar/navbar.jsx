@@ -37,7 +37,7 @@ function Navbar({ register, instructor }) {
           <div className="icon-container">
             <CgProfile />
             <div className="username">
-              {instructor ? instructor.username : instructor.username}
+              {instructor ? instructor.username : register.username}
             </div>
           </div>
         )}
