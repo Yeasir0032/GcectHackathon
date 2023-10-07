@@ -56,7 +56,7 @@ We aim to provide certification for completed courses and assessments to help us
 
 ## Getting Started
 
-To get started with Alien Hub, simply visit our website at [www.alienhub.com](https://www.alienhub.com) and sign up for an account. Once you're logged in, you can explore our library, browse available courses, and start your learning journey.
+To get started with Alien Hub, simply visit our website and sign up for an account. Once you're logged in, you can explore our library, browse available courses, and start your learning journey.
 
 ## Usage
 
