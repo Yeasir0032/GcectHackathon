@@ -24,6 +24,7 @@ function Navbar({ register, instructor }) {
           <Link to="/">Alien HUB</Link>
         </div>
         <div className="all-links">
+          {instructor && <Link to="/instructor">Dashboard</Link>}
           {register && <Link to="/student">Dashboard</Link>}
           {register && <Link to="/course">Courses</Link>}
           <Link to="/library">Library</Link>
