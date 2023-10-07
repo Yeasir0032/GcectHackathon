@@ -30,7 +30,7 @@ const Login = ({ setToken, register }) => {
         password: formData.password,
       });
       if (error) throw error;
-      // console.log(data);
+      //setting item in local storage
       localStorage.setItem("token", JSON.stringify(data));
       setToken(data);
       //setting token
