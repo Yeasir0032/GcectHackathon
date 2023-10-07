@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import UserRegistration from "./pages/login/UserRegistration";
 import CourseEnroll from "./pages/login/course/courseEnroll";
 import CourseView from "./pages/login/course/courseView";
+import StudentDashboard from "./pages/Student/dashboard";
 
 function App() {
   const [token, setToken] = useState();
@@ -37,7 +38,7 @@ function App() {
       <BrowserRouter>
         <Navbar register={register} instructor={instructor} />
         <Routes>
-          <Route path="/" element={<HomeBanner />} />
+          <Route path="/" element={<HomeBanner register={register} />} />
           <Route
             path="/login"
             element={<Login setToken={setToken} register={setRegister} />}
@@ -50,6 +51,7 @@ function App() {
           )}
           <Route path="/signup" element={<Registration />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/student" element={<StudentDashboard />} />
           <Route path="/library/:id" element={<ResourcePage />} />
           {register && <Route path="/course" element={<CourseEnroll />} />}
           {register && <Route path="/course/:id" element={<CourseView />} />}
